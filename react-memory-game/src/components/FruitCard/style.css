@@ -1,0 +1,11 @@
+img{
+    height: 200px;
+    width: 200px;
+}
+
+
+card{
+    margin: 20px;
+    border-style: black solid 2px;
+    float: left
+}
