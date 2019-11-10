@@ -3,7 +3,6 @@ import fruits from "./fruits.json"
 import FruitCard from "./components/FruitCard/index"
 import Title from "./components/Title/index"
 import Wrapper from "./components/Wrapper/index"
-import Counter from "./components/Counter/index"
 
 class App extends Component {
 
@@ -13,8 +12,7 @@ class App extends Component {
     topScore: 0
   };
 
-  shuffleCards = () =>{
-
+  shuffleCards = () => {
     for (let i = this.state.fruits.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
       const temp = this.state.fruits[i]
@@ -24,8 +22,7 @@ class App extends Component {
       console.log(temp)
       this.setState({ fruits: fruits })
     }
-
-  } 
+  }
 
   cardClick = (id) => {
     console.log("clicked a fruit!")
@@ -42,7 +39,6 @@ class App extends Component {
       tempFruits[j] = temp
       console.log(temp)
       this.setState({ fruits: fruits })
-
     }
 
     let won = true;
@@ -58,38 +54,20 @@ class App extends Component {
         else {
           item.clicked = true;
           newScore = this.state.currentScore + 1;
+          if(newScore === 12){
+            alert("YOU WON!")
+          }
         }
       }
       return item;
-    })
+    });
 
     if (won === true) {
       this.setState({
         fruits: newImageArr,
         currentScore: newScore
       }, () => {
-        console.log('are they telling the truth: ',this.state.currentScore)
-
-        if(this.state.currentScore = 12){
-          alert("CONGRATULATIONS")
-          const newGameArr = this.state.fruits.map(item => {
-            item.clicked = false
-            return item
-          })
-          console.log('newGameArr', newGameArr);
-    
-          var newTopScore = this.state.topScore
-    
-          if(this.state.currentScore > this.state.topScore){
-            newTopScore = this.state.currentScore
-          }
-    
-          this.setState({
-            currentScore: 0,
-            topScore: newTopScore,
-            fruits: newGameArr
-          })
-        }
+        console.log('current score: ', this.state.currentScore)
       })
     }else {
       alert("YOU FAILED")
@@ -97,56 +75,44 @@ class App extends Component {
         item.clicked = false
         return item
       })
-      console.log('newGameArr', newGameArr);
 
       var newTopScore = this.state.topScore
 
-      if(this.state.currentScore > this.state.topScore){
+      if (this.state.currentScore > this.state.topScore) {
         newTopScore = this.state.currentScore
-      }
+      };
 
       this.setState({
-        // won: true,
         currentScore: 0,
         topScore: newTopScore,
         fruits: newGameArr
-      }
-      // ()=> this.shuffleCards()
-      )
+      });
     };
-
     console.log("clicked id: ", id)
-
-    // this.setState({ currentScore: this.state.currentScore + 1 }, () => console.log("count: ", this.state.currentScore))
   };
 
-    render() {
-      return (
+  render() {
+    return (
 
-        <div>
-          <Title
-            currentScore={this.state.currentScore}
-            topScore={this.state.topScore}
-          />
-          <Wrapper>
+      <div>
+        <Title
+          currentScore={this.state.currentScore}
+          topScore={this.state.topScore}
+        />
 
-            {/* <Counter/> */}
-            {this.state.fruits.map((fruit) => (
-              <FruitCard key={fruit.id}
-                name={fruit.name}
-                image={fruit.image}
-                id={fruit.id}
-                cardClick={this.cardClick}
-              // cardClick={ <Counter.handleIncrement/>
-              />
-            ))}
-          </Wrapper>
-
-        </div>
-      )
-    };
+        <Wrapper>
+          {this.state.fruits.map((fruit) => (
+            <FruitCard key={fruit.id}
+              name={fruit.name}
+              image={fruit.image}
+              id={fruit.id}
+              cardClick={this.cardClick}
+            />
+          ))}
+        </Wrapper>
+      </div>
+    )
   };
+};
 
-
-
-  export default App;
+export default App;
