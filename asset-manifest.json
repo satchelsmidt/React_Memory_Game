@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/satchelsmidt/React_Memory_Game/static/css/main.f4d2e5b2.chunk.css",
+    "main.js": "/satchelsmidt/React_Memory_Game/static/js/main.81c8af07.chunk.js",
+    "main.js.map": "/satchelsmidt/React_Memory_Game/static/js/main.81c8af07.chunk.js.map",
+    "runtime-main.js": "/satchelsmidt/React_Memory_Game/static/js/runtime-main.a6c77550.js",
+    "runtime-main.js.map": "/satchelsmidt/React_Memory_Game/static/js/runtime-main.a6c77550.js.map",
+    "static/js/2.bd842754.chunk.js": "/satchelsmidt/React_Memory_Game/static/js/2.bd842754.chunk.js",
+    "static/js/2.bd842754.chunk.js.map": "/satchelsmidt/React_Memory_Game/static/js/2.bd842754.chunk.js.map",
+    "index.html": "/satchelsmidt/React_Memory_Game/index.html",
+    "precache-manifest.4e0b13e2850018bba97f4575af589bfd.js": "/satchelsmidt/React_Memory_Game/precache-manifest.4e0b13e2850018bba97f4575af589bfd.js",
+    "service-worker.js": "/satchelsmidt/React_Memory_Game/service-worker.js",
+    "static/css/main.f4d2e5b2.chunk.css.map": "/satchelsmidt/React_Memory_Game/static/css/main.f4d2e5b2.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a6c77550.js",
+    "static/js/2.bd842754.chunk.js",
+    "static/css/main.f4d2e5b2.chunk.css",
+    "static/js/main.81c8af07.chunk.js"
+  ]
+}
