@@ -54,22 +54,28 @@ class App extends Component {
         else {
           item.clicked = true;
           newScore = this.state.currentScore + 1;
-          if(newScore === 12){
-            alert("YOU WON!")
-          }
         }
       }
       return item;
     });
 
-    if (won === true) {
+    if (won === true && newScore === 12) {
+      alert("YOU WON!")
+
+      this.setState({
+        currentScore: 0,
+        topScore: 12,
+        fruits: newImageArr
+      })
+
+    } else if (won === true) {
       this.setState({
         fruits: newImageArr,
         currentScore: newScore
       }, () => {
         console.log('current score: ', this.state.currentScore)
       })
-    }else {
+    } else {
       alert("YOU FAILED")
       const newGameArr = this.state.fruits.map(item => {
         item.clicked = false
