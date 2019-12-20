@@ -24,3 +24,8 @@ Once all cards are clicked, game resets and images are returned to random order.
 
 * JavaScript
   * React.js
+### Future Development
+
+* Update header/title to be centered + less ugly
+* Spacing around cards (specifically around window borders)
+* Add footer w/ copyright + name + github
