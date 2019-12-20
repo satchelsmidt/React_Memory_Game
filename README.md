@@ -1,4 +1,25 @@
 # React_Memory_Game
-User is shown 12 pictures of various fruits, with order of pictures shuffling each time the user clicks on one. If user is able to click on each individual picture with no repeats, then they win. The game is designed to test and build memory skills.
 
-This game is built using the React JS library, with 3 primary components - the title bar, the wrapper containing the image cards, and the image cards. The fruit cards are generated dynamically using a JSON file mapped to the react component for the image cards, and the array is modified as the game progresses. 
+### About
+
+Application is a memory testing game, where user must click each unique picture once, with no repeat clicks. Pictures shuffle randomly upon each click. 
+
+This game is built using the React JS library, with 3 primary components - the title bar, the wrapper containing the image cards, and the image cards. The fruit picture cards are generated dynamically using a JSON file mapped to the react component for the image cards, and the way that these cards are rendered to the screen is modified as the game progresses. 
+
+### Walkthrough
+
+App is 'fruit salad' themed, and so user is shown 12 images of various fruits upon game load. 
+
+To play the game, click on any image to start. The cards will shuffle randomly, and then the user must click a new image that they have not clicked before. 
+
+This gif shows the game in action: 
+<img src="/public/react_readme_1.gif" width="600" height="250"/>
+
+The top score is tracked globally and is displayed in the game header. It increments for each successful new click the user has. 
+
+Once all cards are clicked, game resets and images are returned to random order. 
+
+### Technology Used
+
+* JavaScript
+  * React.js
